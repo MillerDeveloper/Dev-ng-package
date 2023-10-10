@@ -1,0 +1,33 @@
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-top__part {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-top__controls {
+    display: flex;
+    gap: 5px;
+
+    ::ng-deep {
+        .p-button.p-button-icon-only {
+            padding: 5px 0;
+        }
+    }
+}
+
+.header-top--title {
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.header-toolbar {
+    display: flex;
+    gap: 5px;
+}

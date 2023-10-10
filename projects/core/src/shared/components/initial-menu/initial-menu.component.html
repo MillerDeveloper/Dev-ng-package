@@ -1,0 +1,15 @@
+<section class="initial-menu">
+    <div class="initial-menu__container">
+        <div *ngFor="let menu of menuList" class="initial-menu__box">
+            <p class="initial-menu--menu-title">
+                {{ menu.label }}
+            </p>
+
+            <ul class="initial-menu__list">
+                <li *ngFor="let menuLink of menu.links" class="initial-menu--element" [routerLink]="menuLink.link">
+                    {{ menuLink.label }}
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>

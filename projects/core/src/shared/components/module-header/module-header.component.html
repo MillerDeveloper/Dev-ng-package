@@ -1,0 +1,31 @@
+<div class="header">
+    <ng-container *ngIf="getTemplate('headerTop') as templateData; else defaultHeaderTop">
+        <ng-content *ngTemplateOutlet="templateData.template"></ng-content>
+    </ng-container>
+    <ng-template #defaultHeaderTop>
+        <div class="header-top">
+            <div class="header-top__part">
+                <div class="header-top__controls">
+                    <p-button icon="pi pi-chevron-left" styleClass="p-button-secondary"></p-button>
+                    <p-button icon="pi pi-chevron-right" styleClass="p-button-secondary"></p-button>
+                </div>
+
+                <p class="header-top--title">{{ header }}</p>
+            </div>
+            <div class="header-top__part">
+                <p-button icon="pi pi-ellipsis-v" styleClass="p-button-secondary p-button-text"></p-button>
+                <p-button icon="pi pi-times" styleClass="p-button-secondary p-button-text"></p-button>
+            </div>
+        </div>
+    </ng-template>
+
+    <ng-container *ngIf="getTemplate('headerToolbar') as templateData; else defaultHeaderToolbar">
+        <ng-content *ngTemplateOutlet="templateData.template"></ng-content>
+    </ng-container>
+    <ng-template #defaultHeaderToolbar>
+        <div class="header-toolbar">
+            <p-button icon="pi pi-print" styleClass="p-button-secondary"></p-button>
+            <p-button icon="pi pi-copy" styleClass="p-button-secondary"></p-button>
+        </div>
+    </ng-template>
+</div>
